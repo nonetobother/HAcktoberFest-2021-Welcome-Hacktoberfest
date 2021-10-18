@@ -12,6 +12,9 @@ class Solution {
     {
         if(root == null)return;
         
+        if(root.val == target)
+           count++;
+        
         //1. Take the root node with forming an ans
         solve(root.left, target - root.val);
         solve(root.right, target - root.val);
