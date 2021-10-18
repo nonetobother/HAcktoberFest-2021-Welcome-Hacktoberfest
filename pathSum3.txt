@@ -1,0 +1,21 @@
+class Solution {
+    int count = 0;
+    public int pathSum(TreeNode root, int targetSum) {
+        if(root == null)return 0;
+        solve(root, targetSum);
+        pathSum(root.left, targetSum);
+        pathSum(root.right, targetSum);
+        return count;
+    }
+    
+    public void solve(TreeNode root, int target)
+    {
+        if(root == null)return;
+        
+        //1. Take the root node with forming an ans
+        solve(root.left, target - root.val);
+        solve(root.right, target - root.val);
+        
+    }
+    
+}
