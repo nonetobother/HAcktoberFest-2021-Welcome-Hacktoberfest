@@ -26,6 +26,8 @@ class Bank {
     //Commenting for check
     public boolean deposit(int account, long money) {
         
+        if(account-1 < 0 || account-1 >=arr.length)return false;
+        
         long val = arr[account - 1];
         val = val + money;
         if(val < 0)return false;
