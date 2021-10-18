@@ -23,7 +23,7 @@ class Bank {
         arr[account2-1] = val2+money;
         return true;
     }
-    
+    //Commenting for check
     public boolean deposit(int account, long money) {
         
         long val = arr[account - 1];
