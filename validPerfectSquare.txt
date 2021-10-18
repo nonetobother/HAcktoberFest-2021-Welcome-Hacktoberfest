@@ -9,8 +9,8 @@ class Solution {
         
         while(low<=high)
         {
-            int mid = (low + high)/2;
             //To avoid integer flow
+            int mid = low + (high - low)/2;
             if(mid == num/mid && num%mid == 0)
                 return true;
             
